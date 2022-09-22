@@ -5,14 +5,14 @@
 <main>
   <h1>TJ Albertson</h1>
   <h2>Fullstack Developer</h2>
-  <hr />
+
   <div class="sites-flex">
     <div class="site">
       <div class="site-header">
-        <Cloudbox/>
-        <h2> Cloudbox</h2>
+        <Cloudbox />
+        <h2>Cloudbox</h2>
       </div>
-      
+
       <img src="images/mountains.jpg" />
       <p>Repositories</p>
       <hr />
@@ -23,11 +23,10 @@
     </div>
     <div class="site">
       <div class="site-header">
-        <Cloudbox/>
+        <Cloudbox />
         <h2>The Colosseum</h2>
       </div>
 
-     
       <img src="images/nature.jpg" />
       <p>Repositories</p>
       <hr />
@@ -41,6 +40,8 @@
 </main>
 
 <style>
+  
+
   .links {
     margin-bottom: 15px;
   }
@@ -52,18 +53,17 @@
   }
 
   p {
-    display: flex;
-    flex-direction: column;
+    margin: 0px;
   }
+
   .site {
-    border-style: solid;
     margin: 25px;
     margin-left: 55px;
     margin-right: 55px;
     width: 50rem;
+    background: white;
+    border-radius: 15px;
   }
-
-  svg {}
 
   .site-header {
     display: inline-flex;
@@ -79,13 +79,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #EBF5FB;
   }
 
   main {
     text-align: center;
-    padding: 1em;
+    padding: 0;
     max-width: 240px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   h1 {
