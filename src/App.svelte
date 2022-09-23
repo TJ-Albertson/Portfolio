@@ -1,13 +1,40 @@
 <script>
   import Cloudbox from "./SVG/Cloudbox.svelte";
   import Mail from "./SVG/Mail.svelte";
-  import Rome from "./SVG/Rome.svelte"
-
+  import Rome from "./SVG/Rome.svelte";
 </script>
 
 <main>
+  <head>
+    <script
+      src="https://kit.fontawesome.com/4cc35cc184.js"
+      crossorigin="anonymous"></script>
+  </head>
+
+  <table>
+    <tr>
+      <td class="animated zoomIn" style="animation-delay:2.2s;"
+        ><a class="social"><i class="fab fa-facebook" /></a></td
+      >
+      <td class="animated zoomIn" style="animation-delay:2.4s;"
+        ><a class="social"><i class="fab fa-twitter" /></a></td
+      >
+      <td class="animated zoomIn" style="animation-delay:2.6s;"
+        ><a class="social"><i class="fab fa-instagram" /></a></td
+      >
+      <td class="animated zoomIn" style="animation-delay:2.8s;"
+        ><a class="social"><i class="fab fa-dribbble" /></a></td
+      >
+      <td class="animated zoomIn" style="animation-delay:3.0s;"
+        ><a class="social"><i class="fab fa-medium" /></a></td
+      >
+    </tr>
+  </table>
   <h1>TJ Albertson</h1>
-  <h2>Fullstack Developer</h2>
+  <h3>Fullstack Developer</h3>
+
+  <h1>Projects</h1>
+  
 
   <div class="sites-flex">
     <div class="site">
@@ -18,7 +45,7 @@
 
       <img src="images/mountains.jpg" />
       <div class="links">
-        <a href="">Website</a> | <a href="">Github</a>
+        <a href="">Demo</a> | <a href="">Github</a>
       </div>
     </div>
     <div class="site">
@@ -44,26 +71,37 @@
 </main>
 
 <style>
+  @import url("https://fonts.googleapis.com/css?family=Poppins");
+
+  .social {
+    color: rgb(255, 44, 90);
+    font-size: 23px;
+    padding: 12px 17px;
+    border-radius: 50%;
+    background: transparent;
+    transition: 0.4s ease-in-out;
+    font-weight: bold;
+    margin: 0px 8px;
+  }
+
+  .social:hover {
+    cursor: pointer;
+    color: #fff;
+    background: rgb(255, 44, 90);
+    box-shadow: 0px 10px 30px rgba(255, 66, 107, 0.8);
+  }
 
   .colosseum {
     height: 50px;
     width: 50px;
   }
 
-  .stripe {
-    background-color: #ebf5fb;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 60%;
-    z-index: -3;
+  .table {
+    justify-content: center;
   }
 
-  .background {
-    background-color: #808b96;
+  .stripe {
+    background-color: #ffffff;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -71,7 +109,7 @@
     transform: translate(-50%, -50%);
     height: 100vh;
     width: 100%;
-    z-index: -4;
+    z-index: -3;
   }
 
   .links {
@@ -97,6 +135,14 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
     background: rgb(255, 255, 255);
+    transition: 0.4s ease-in-out;
+  }
+
+  .site:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .contact-footer {
@@ -132,10 +178,16 @@
   h1 {
     color: #ff3e00;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 2em;
     font-weight: 100;
+    font-family: "Poppins", sans-serif;
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: 35px;
+  }
+
+  h3 {
+    margin-top: 0px;
   }
 
   @media (min-width: 640px) {
