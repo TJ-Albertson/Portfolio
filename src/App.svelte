@@ -187,7 +187,7 @@
   }
 
   h3 {
-    margin-top: 0px;
+    margin: 0px;
   }
 
   @media (min-width: 640px) {
