@@ -2,7 +2,9 @@
   import Cloudbox from "./SVG/Cloudbox.svelte";
   import Mail from "./SVG/Mail.svelte";
   import Rome from "./SVG/Rome.svelte";
-</script>
+  import Paint1 from "./SVG/Paint1.svelte";
+
+  </script>
 
 <main>
   <head>
@@ -11,30 +13,22 @@
       crossorigin="anonymous"></script>
   </head>
 
+  <h1>TJ Albertson</h1>
+  <h3>Fullstack Developer</h3>
   <table>
     <tr>
       <td class="animated zoomIn" style="animation-delay:2.2s;"
-        ><a class="social"><i class="fab fa-facebook" /></a></td
+        ><a class="social"><i class="fa-brands fa-github" /></a></td
       >
       <td class="animated zoomIn" style="animation-delay:2.4s;"
-        ><a class="social"><i class="fab fa-twitter" /></a></td
+        ><a class="social"><i class="fa-brands fa-linkedin" /></a></td
       >
       <td class="animated zoomIn" style="animation-delay:2.6s;"
-        ><a class="social"><i class="fab fa-instagram" /></a></td
-      >
-      <td class="animated zoomIn" style="animation-delay:2.8s;"
-        ><a class="social"><i class="fab fa-dribbble" /></a></td
-      >
-      <td class="animated zoomIn" style="animation-delay:3.0s;"
-        ><a class="social"><i class="fab fa-medium" /></a></td
+        ><a class="social" alt="resume"><i class="fa-regular fa-file" /></a></td
       >
     </tr>
   </table>
-  <h1>TJ Albertson</h1>
-  <h3>Fullstack Developer</h3>
-
-  <h1>Projects</h1>
-  
+  <h2 class="contact">Projects</h2>
 
   <div class="sites-flex">
     <div class="site">
@@ -45,7 +39,10 @@
 
       <img src="images/mountains.jpg" />
       <div class="links">
-        <a href="">Demo</a> | <a href="">Github</a>
+        <a href="">Demo</a> |
+        <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
+          >Github</a
+        >
       </div>
     </div>
     <div class="site">
@@ -56,22 +53,30 @@
 
       <img src="images/nature.jpg" />
       <div class="links">
-        <a href="">Website</a> | <a href="">Github</a>
+        <a href="">Website</a> |
+        <a href="https://github.com/TJ-Albertson/The-Colosseum" target="_blank"
+          >Github</a
+        >
       </div>
     </div>
   </div>
-  <h2>Contact Me</h2>
+  <h2 class="contact ">Contact Me</h2>
   <div class="contact-footer">
     <Mail />
     <p>tj.albertson@outlook.com</p>
   </div>
 
-  <div class="stripe" />
-  <div class="background" />
+  <div class="stripe">
+    <Paint1 />
+  </div>
 </main>
 
 <style>
   @import url("https://fonts.googleapis.com/css?family=Poppins");
+
+  a {
+    color: rgb(255, 44, 90);
+  }
 
   .social {
     color: rgb(255, 44, 90);
@@ -91,25 +96,14 @@
     box-shadow: 0px 10px 30px rgba(255, 66, 107, 0.8);
   }
 
-  .colosseum {
-    height: 50px;
-    width: 50px;
-  }
-
-  .table {
-    justify-content: center;
-  }
-
   .stripe {
-    background-color: #ffffff;
     position: absolute;
-    left: 50%;
-    top: 50%;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 100%;
-    z-index: -3;
+    transform: translate(100%, 0%);
+    z-index: -1;
+    height: 700px;
+    width: 700px;
+    overflow: hidden;
   }
 
   .links {
@@ -133,9 +127,8 @@
     width: 50rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 1;
-    background: rgb(255, 255, 255);
     transition: 0.4s ease-in-out;
+    background-color: #fff;
   }
 
   .site:hover {
@@ -143,6 +136,12 @@
     cursor: pointer;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .contact {
+    padding: 5px 0px;
+    border-bottom: 4px solid rgb(255, 44, 90);
+    width: auto;
   }
 
   .contact-footer {
@@ -169,6 +168,9 @@
   }
 
   main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 0;
     max-width: 240px;
@@ -176,9 +178,8 @@
   }
 
   h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 2em;
+    color: rgb(255, 44, 90);
+    font-size: 3em;
     font-weight: 100;
     font-family: "Poppins", sans-serif;
     margin-top: 0;
@@ -188,7 +189,10 @@
 
   h3 {
     margin: 0px;
+    margin-bottom: 15px;
   }
+
+  
 
   @media (min-width: 640px) {
     main {
