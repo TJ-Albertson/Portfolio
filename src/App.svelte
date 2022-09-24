@@ -3,6 +3,9 @@
   import Mail from "./SVG/Mail.svelte";
   import Rome from "./SVG/Rome.svelte";
   import Paint1 from "./SVG/Paint1.svelte";
+  import Paint2 from "./SVG/Paint2.svelte";
+  import Paint1Copy from "./SVG/Paint1 copy.svelte";
+  import Paint2Copy from "./SVG/Paint2 copy.svelte";
 
   </script>
 
@@ -18,13 +21,13 @@
   <table>
     <tr>
       <td class="animated zoomIn" style="animation-delay:2.2s;"
-        ><a class="social"><i class="fa-brands fa-github" /></a></td
+        ><a class="social" href="https://github.com/TJ-Albertson" target="_blank"><i class="fa-brands fa-github" /></a></td
       >
       <td class="animated zoomIn" style="animation-delay:2.4s;"
-        ><a class="social"><i class="fa-brands fa-linkedin" /></a></td
+        ><a class="social" href="https://linkedin.com/in/thomas-albertson-895443250" target="_blank"><i class="fa-brands fa-linkedin" /></a></td
       >
       <td class="animated zoomIn" style="animation-delay:2.6s;"
-        ><a class="social" alt="resume"><i class="fa-regular fa-file" /></a></td
+        ><a class="social"  href="./images/resume.pdf" target="_blank" alt="resume"><i class="fa-regular fa-file" /></a></td
       >
     </tr>
   </table>
@@ -37,7 +40,7 @@
         <h2>Cloudbox</h2>
       </div>
 
-      <img src="images/mountains.jpg" />
+      <img src="images/cloudbox.png" />
       <div class="links">
         <a href="">Demo</a> |
         <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
@@ -46,6 +49,10 @@
       </div>
     </div>
     <div class="site">
+      <div class="site-paint-one">
+        <Paint1Copy />
+      </div>
+      
       <div class="site-header">
         <Rome />
         <h2>The Colosseum</h2>
@@ -62,13 +69,18 @@
   </div>
   <h2 class="contact ">Contact Me</h2>
   <div class="contact-footer">
-    <Mail />
-    <p>tj.albertson@outlook.com</p>
+    <Mail/> tj.albertson@outlook.com
   </div>
 
   <div class="stripe">
     <Paint1 />
   </div>
+
+  <div class="stripe-two">
+    <Paint2 />
+  </div>
+
+  
 </main>
 
 <style>
@@ -106,14 +118,37 @@
     overflow: hidden;
   }
 
+  .stripe-two {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-92%, 40%);
+    z-index: -1;
+    height: 700px;
+    width: 700px;
+    overflow: hidden;
+  }
+
+  .site-paint-one {
+    position: absolute;
+    transform: translate(100%, 0%);
+  }
+
+  .site-paint-two {
+    position: absolute;
+    transform: translate(100%, 0%);
+  }
+
+
   .links {
     margin-bottom: 15px;
   }
 
   img {
-    height: 350px;
-    width: 700px;
-    margin: 15px;
+    width: 640px;
+    height: 360px;
+    margin: 10px;
+    border-style: solid;
+    border-color: grey;
   }
 
   p {
@@ -147,6 +182,7 @@
   .contact-footer {
     display: inline-flex;
     font-family: sans-serif;
+    font-weight:bold;
     gap: 15px;
     align-items: center;
   }
