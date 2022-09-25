@@ -44,9 +44,9 @@
         <h2>Cloudbox</h2>
       </div>
 
-      <img src="images/cloudbox.png" />
+      <img src="images/cloudbox.png" alt="colosseum-preview" />
       <div class="links">
-        <a href="">Demo</a> |
+        <a href="http://cloud-box-storage.com">Demo</a> |
         <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
           >Github</a
         >
@@ -62,9 +62,9 @@
         <h2>The Colosseum</h2>
       </div>
 
-      <img src="images/nature.jpg" />
+      <img src="images/nature.jpg" alt="colosseum-preview" />
       <div class="links">
-        <a href="">Website</a> |
+        <a href="http://themoviecolosseum.com">Website</a> |
         <a href="https://github.com/TJ-Albertson/The-Colosseum" target="_blank"
           >Github</a
         >
@@ -153,10 +153,6 @@
     margin: 10px;
     border-style: solid;
     border-color: grey;
-  }
-
-  p {
-    margin: 0px;
   }
 
   .site {
