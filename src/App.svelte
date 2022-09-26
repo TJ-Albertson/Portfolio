@@ -57,7 +57,7 @@
         <Paint1Copy />
       </div>
       
-      <div class="site-header">
+      <div class="site-header-two">
         <Rome />
         <h2>The Colosseum</h2>
       </div>
@@ -196,6 +196,17 @@
     gap: 15px;
     align-items: center;
     height: 80px;
+  }
+
+  .site-header-two {
+    display: inline-flex;
+    font-family: 'Open Sans';
+    font-size: 40px;
+    margin: 15px;
+    gap: 15px;
+    align-items: center;
+    height: 80px;
+    font-weight: bold;
   }
 
   .sites-flex {
