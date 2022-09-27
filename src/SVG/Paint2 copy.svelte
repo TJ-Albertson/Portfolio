@@ -1,5 +1,5 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="500.000000pt" height="368.000000pt" viewBox="0 0 500.000000 368.000000"
+ width="250.000000pt" height="368.000000pt" viewBox="0 0 250.000000 368.000000"
  preserveAspectRatio="xMidYMid meet">
 <g transform="rotate(-80 0 0) translate(-874.50000, 302.500000) scale(0.100000,-0.100000)"
 fill="#FF2C5A" stroke="none">
