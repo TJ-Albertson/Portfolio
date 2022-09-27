@@ -114,8 +114,8 @@
 
   .stripe {
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(100%, 0%);
+    top: 0px;
+    right: 0px;
     z-index: -1;
     height: 700px;
     width: 700px;
@@ -124,12 +124,13 @@
 
   .stripe-two {
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-92%, 40%);
+    bottom: 0px;
+    left: 0px;
     z-index: -1;
     height: 700px;
     width: 700px;
     overflow: hidden;
+    
   }
 
   .site-paint-one {
@@ -247,4 +248,14 @@
       max-width: none;
     }
   }
+
+  @media only screen and (max-width: 1920px) {
+    .sites-flex {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    } 
+  }
+
 </style>
