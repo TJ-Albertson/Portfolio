@@ -46,6 +46,7 @@
   <h2 class="contact">Projects</h2>
 
   <div class="sites-flex">
+    
     <div class="site">
       <div class="site-paint-two">
         <Paint2Copy />
@@ -64,9 +65,15 @@
         >
       </div>
     </div>
+
+
     <div class="site">
       <div class="site-paint-one">
         <Paint1Copy />
+      </div>
+
+      <div class="stripe">
+        <Paint1 />
       </div>
 
       <div class="site-header-two">
@@ -82,15 +89,17 @@
         >
       </div>
     </div>
+
+
+
+    
   </div>
   <h2 class="contact ">Contact Me</h2>
   <div class="contact-footer">
     <Mail /> tj.albertson@outlook.com
   </div>
 
-  <div class="stripe">
-    <Paint1 />
-  </div>
+  
 
   <div class="stripe-two">
     <Paint2 />
@@ -165,7 +174,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.4s ease-in-out;
     background-color: #fff;
-    overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
 
   .site:hover {
@@ -206,12 +216,14 @@
 
   .site-paint-one {
     position: absolute;
-    transform: translate(100%, 0%);
+    top: 0;
+    right: 0;
   }
 
   .site-paint-two {
     position: absolute;
-    transform: translate(0%, 9%);
+    bottom: 0;
+    left: 0;
   }
 
   a {
@@ -223,13 +235,11 @@
   }
   /*        */
   .stripe {
+    
     position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: -1;
-    height: 700px;
-    width: 700px;
-    overflow: hidden;
+    top: -300px;
+    right: -300px;
+    z-index: 0;
   }
 
   .stripe-two {
@@ -299,7 +309,7 @@
     }
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media (orientation: portrait) {
     .sites-flex {
       flex-direction: column-reverse;
     }
