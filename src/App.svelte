@@ -101,12 +101,14 @@
   @import url("https://fonts.googleapis.com/css?family=Poppins");
 
   main {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
 
   h1 {
@@ -158,7 +160,7 @@
     margin: 25px;
     margin-left: 55px;
     margin-right: 55px;
-    max-width: 50rem;
+    width: 50rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.4s ease-in-out;
@@ -232,12 +234,9 @@
 
   .stripe-two {
     position: absolute;
-    bottom: 0px;
+    bottom: -350px;
     left: 0px;
     z-index: -1;
-    height: 700px;
-    width: 700px;
-    overflow: hidden;
   }
   /*        */
   .contact-footer {
@@ -249,13 +248,32 @@
     margin-bottom: 30px;
   }
 
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
+  @media only screen and (max-width: 640px) {
+    .site {
+      width: 5rem;
+    }
+
+    img {
+      width: 16px;
+      height: 9px;
+    }
+
+    .site-header {
+      font-size: 10px;
+      height: 40px;
+    }
+
+    .site-header-two {
+      font-size: 10px;
+      height: 40px;
+    }
+
+    .site-paint-one {
+      visibility: hidden;
     }
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 840px) {
     .site {
       width: 35rem;
       margin: 20px;
@@ -279,9 +297,14 @@
     .site-paint-one {
       visibility: hidden;
     }
+  }
 
-    .site-paint-two {
-      visibility: hidden;
+  @media only screen and (max-width: 1280px) {
+    .sites-flex {
+      flex-direction: column-reverse;
+    }
+    .stripe {
+      top: 17em;
     }
   }
 </style>
