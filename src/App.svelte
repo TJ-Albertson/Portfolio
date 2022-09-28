@@ -2,10 +2,10 @@
   import Cloudbox from "./SVG/Cloudbox.svelte";
   import Mail from "./SVG/Mail.svelte";
   import Rome from "./SVG/Rome.svelte";
-  import Paint1 from "./SVG/Paint1.svelte";
-  import Paint2 from "./SVG/Paint2.svelte";
-  import Paint1Copy from "./SVG/Paint1 copy.svelte";
-  import Paint2Copy from "./SVG/Paint2 copy.svelte";
+  import Paint_Colosseum from "./SVG/Paint_Colosseum.svelte";
+  import Paint_Cloudbox from "./SVG/Paint_Cloudbox.svelte";
+  import PaintSplat_Colosseum from "./SVG/PaintSplat_Colosseum.svelte";
+  import PaintSplat_Cloudbox from "./SVG/PaintSplat_Cloudbox.svelte";
 </script>
 
 <main>
@@ -45,64 +45,61 @@
   </table>
   <h2 class="contact">Projects</h2>
 
-  <div class="sites-flex">
-    
-    <div class="site">
-      <div class="site-paint-two">
-        <Paint2Copy />
+  <div class="flex-container">
+    <div class="flex-item">
+      <div class="paint-cloudbox">
+        <Paint_Cloudbox />
       </div>
 
-      <div class="site-header">
-        <Cloudbox />
-        <h2>Cloudbox</h2>
-      </div>
+      <div class="site-card">
+        <div class="paint-splat-cloudbox">
+          <PaintSplat_Cloudbox />
+        </div>
 
-      <img src="images/cloudbox.png" alt="colosseum-preview" />
-      <div class="links">
-        <a href="http://cloud-box-storage.com">Demo</a> |
-        <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
-          >Github</a
-        >
-      </div>
-    </div>
+        <div class="site-header" id="cloudbox">
+          <Cloudbox />
+          <h2>Cloudbox</h2>
+        </div>
 
-
-    <div class="site">
-      <div class="site-paint-one">
-        <Paint1Copy />
-      </div>
-
-      <div class="stripe">
-        <Paint1 />
-      </div>
-
-      <div class="site-header-two">
-        <Rome />
-        <h2>The Colosseum</h2>
-      </div>
-
-      <img src="images/colosseum.png" alt="colosseum-preview" />
-      <div class="links">
-        <a href="http://themoviecolosseum.com">Website</a> |
-        <a href="https://github.com/TJ-Albertson/The-Colosseum" target="_blank"
-          >Github</a
-        >
+        <img src="images/cloudbox.png" alt="colosseum-preview" />
+        <div class="links">
+          <a href="http://cloud-box-storage.com">Demo</a> |
+          <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
+            >Github</a
+          >
+        </div>
       </div>
     </div>
 
+    <div class="flex-item">
+      <div class="paint-colosseum">
+        <Paint_Colosseum />
+      </div>
 
+      <div class="site-card">
+        <div class="paint-splat-colosseum">
+          <PaintSplat_Colosseum />
+        </div>
 
-    
+        <div class="site-header" id="colosseum">
+          <Rome />
+          <h2>The Colosseum</h2>
+        </div>
+
+        <img src="images/colosseum.png" alt="colosseum-preview" />
+        <div class="links">
+          <a href="http://themoviecolosseum.com">Website</a> |
+          <a
+            href="https://github.com/TJ-Albertson/The-Colosseum"
+            target="_blank">Github</a
+          >
+        </div>
+      </div>
+    </div>
   </div>
   <h2 class="contact ">Contact Me</h2>
   <div class="contact-footer">
     <Mail /> tj.albertson@outlook.com
-  </div>
-
-  
-
-  <div class="stripe-two">
-    <Paint2 />
   </div>
 </main>
 
@@ -159,17 +156,20 @@
     width: auto;
   }
   /*        */
-  .sites-flex {
+  .flex-container {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .site {
+  .flex-item {
+    position: relative;
     margin: 25px;
     margin-left: 55px;
     margin-right: 55px;
     width: 50rem;
+  }
+  .site-card {
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.4s ease-in-out;
@@ -178,7 +178,7 @@
     z-index: 1;
   }
 
-  .site:hover {
+  .site-card:hover {
     transform: scale(1.03);
     cursor: pointer;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2),
@@ -187,7 +187,7 @@
   /*        */
   .site-header {
     display: inline-flex;
-    font-family: sans-serif;
+
     font-size: 40px;
     margin: 15px;
     gap: 15px;
@@ -195,14 +195,12 @@
     height: 80px;
   }
 
-  .site-header-two {
-    display: inline-flex;
+  #cloudbox {
+    font-family: sans-serif;
+  }
+
+  #colosseum {
     font-family: "Open Sans";
-    font-size: 40px;
-    margin: 15px;
-    gap: 15px;
-    align-items: center;
-    height: 80px;
     font-weight: bold;
   }
 
@@ -214,16 +212,30 @@
     border-color: grey;
   }
 
-  .site-paint-one {
+  .paint-splat-colosseum {
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .site-paint-two {
+  .paint-splat-cloudbox {
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+
+  .paint-colosseum {
+    position: absolute;
+    top: -427.5px;
+    right: -375px;
+    z-index: 0;
+  }
+
+  .paint-cloudbox {
+    position: absolute;
+    bottom: -603.5px;
+    left: -635px;
+    z-index: 0;
   }
 
   a {
@@ -234,20 +246,7 @@
     margin-bottom: 15px;
   }
   /*        */
-  .stripe {
-    
-    position: absolute;
-    top: -300px;
-    right: -300px;
-    z-index: 0;
-  }
 
-  .stripe-two {
-    position: absolute;
-    bottom: -350px;
-    left: 0px;
-    z-index: -1;
-  }
   /*        */
   .contact-footer {
     display: inline-flex;
