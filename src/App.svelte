@@ -257,63 +257,15 @@
     margin-bottom: 30px;
   }
 
-  @media only screen and (max-width: 640px) {
-    .site {
-      width: 5rem;
-    }
-
-    img {
-      width: 16px;
-      height: 9px;
-    }
-
-    .site-header {
-      font-size: 10px;
-      height: 40px;
-    }
-
-    .site-header-two {
-      font-size: 10px;
-      height: 40px;
-    }
-
-    .site-paint-one {
-      visibility: hidden;
-    }
-  }
-
-  @media only screen and (max-width: 840px) {
-    .site {
-      width: 35rem;
-      margin: 20px;
-    }
-
-    img {
-      width: 426px;
-      height: 240px;
-    }
-
-    .site-header {
-      font-size: 30px;
-      height: 80px;
-    }
-
-    .site-header-two {
-      font-size: 30px;
-      height: 80px;
-    }
-
-    .site-paint-one {
-      visibility: hidden;
+  @media only screen and (min-width: 1920px) {
+    main {
+      overflow: visible;
     }
   }
 
   @media (orientation: portrait) {
-    .sites-flex {
+    .flex-container {
       flex-direction: column-reverse;
-    }
-    .stripe {
-      top: 17em;
     }
   }
 </style>
