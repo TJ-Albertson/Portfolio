@@ -165,10 +165,10 @@
   .flex-item {
     position: relative;
     margin: 25px;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin: 0px 55px 0px 55px;
     width: 50rem;
   }
+
   .site-card {
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -187,7 +187,6 @@
   /*        */
   .site-header {
     display: inline-flex;
-
     font-size: 40px;
     margin: 15px;
     gap: 15px;
@@ -243,7 +242,7 @@
   }
 
   .links {
-    
+    z-index: 2;
   }
   /*        */
 
@@ -256,10 +255,198 @@
     align-items: center;
     margin-bottom: 30px;
   }
+  @media only screen and (max-width: 3840px) {
+    .site-header {
+      font-size: 40px;
+    }
 
-  @media only screen and (min-width: 1920px) {
-    main {
-      overflow: visible;
+    .social {
+      font-size: 23px;
+    }
+
+    .flex-item {
+      width: 80rem;
+    }
+
+    .site-card {
+      height: 55rem;
+    }
+
+    img {
+      width: 1024px;
+      height: 576px;
+      margin: 3em;
+    }
+
+    .social {
+      font-size: 2.5em;
+    }
+
+    h1 {
+      font-size: 4.2em;
+    }
+
+    h2 {
+      font-size: 2.6em;
+    }
+
+    h3 {
+      font-size: 2em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    .contact-footer {
+      font-size: 2em;
+    }
+
+    .links {
+      font-size: 2em;
+    }
+  }
+
+  @media only screen and (max-width: 2870px) {
+    .flex-item {
+      width: 60rem;
+    }
+
+    .site-card {
+      height: 40rem;
+    }
+
+    img {
+      width: 768px;
+      height: 432px;
+      margin: 10px;
+    }
+
+    .social {
+      font-size: 1.5em;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    .contact-footer {
+      font-size: 1.3em;
+    }
+
+    .links {
+      font-size: 1.5em;
+    }
+  }
+
+  @media only screen and (max-width: 2200px) {
+    .flex-item {
+      width: 45rem;
+    }
+
+    .site-card {
+      height: 30rem;
+    }
+
+    .flex-item {
+      margin: 0 2.8em 0 2.8em;
+    }
+
+    img {
+      width: 544px;
+      height: 306px;
+      margin: 10px;
+    }
+
+    .site-header {
+      font-size: 2.5em;
+    }
+
+    .social {
+      font-size: 1.5em;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1.1em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    .contact-footer {
+      font-size: 1em;
+    }
+
+    .links {
+      font-size: 1em;
+    }
+  }
+  @media only screen and (max-width: 1630px) {
+    .flex-item {
+      width: 35rem;
+    }
+
+    .site-card {
+      height: 25rem;
+    }
+
+    img {
+      width: 416px;
+      height: 234px;
+      margin: 0.5em;
+    }
+
+    .site-header {
+      font-size: 2em;
+    }
+
+    .social {
+      font-size: 1.5em;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+
+    .contact-footer {
+      font-size: 1em;
+    }
+
+    .links {
+      font-size: 1em;
     }
   }
 
