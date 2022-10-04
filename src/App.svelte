@@ -115,6 +115,7 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
+    height: 100vh;
   }
 
   h1 {
