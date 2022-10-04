@@ -181,7 +181,6 @@
 
   .site-card:hover {
     transform: scale(1.03);
-    cursor: pointer;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2),
       0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
