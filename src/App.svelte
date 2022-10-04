@@ -1,6 +1,5 @@
 <script>
   import Cloudbox from "./SVG/Cloudbox.svelte";
-  import Mail from "./SVG/Mail.svelte";
   import Rome from "./SVG/Rome.svelte";
   import Paint_Colosseum from "./SVG/Paint_Colosseum.svelte";
   import Paint_Cloudbox from "./SVG/Paint_Cloudbox.svelte";
@@ -43,7 +42,7 @@
       >
     </tr>
   </table>
-  <h2 class="contact">Projects</h2>
+  <h2 class="contact" id="project">Projects</h2>
 
   <div class="flex-container">
     <div class="flex-item">
@@ -57,13 +56,13 @@
         </div>
 
         <div class="site-header" id="cloudbox">
-          <Cloudbox />
+          <Cloudbox class="cloudbox-svg"/>
           <h2>Cloudbox</h2>
         </div>
 
         <img src="images/cloudbox.png" alt="colosseum-preview" />
         <div class="links">
-          <a href="http://cloud-box-storage.com">Demo</a> |
+          <a href="https://cloud-box-storage.com" target="_blank">Demo</a> |
           <a href="https://github.com/TJ-Albertson/Cloudbox" target="_blank"
             >Github</a
           >
@@ -88,7 +87,7 @@
 
         <img src="images/colosseum.png" alt="colosseum-preview" />
         <div class="links">
-          <a href="http://themoviecolosseum.com">Website</a> |
+          <a href="https://themoviecolosseum.com" target="_blank">Website</a> |
           <a
             href="https://github.com/TJ-Albertson/The-Colosseum"
             target="_blank">Github</a
@@ -97,14 +96,18 @@
       </div>
     </div>
   </div>
-  <h2 class="contact ">Contact Me</h2>
+  <h2 class="contact" id="contact">Contact Me</h2>
   <div class="contact-footer">
-    <Mail /> tj.albertson@outlook.com
+    <i class="fa-solid fa-envelope" />tj.albertson@outlook.com
   </div>
 </main>
 
 <style>
   @import url("https://fonts.googleapis.com/css?family=Poppins");
+
+  body {
+    overflow-y: hidden;
+  }
 
   main {
     position: relative;
@@ -114,7 +117,8 @@
     text-align: center;
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: 100vh;
   }
 
@@ -130,7 +134,7 @@
 
   h3 {
     margin: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 1.2em;
   }
 
   .social {
@@ -156,6 +160,14 @@
     border-bottom: 4px solid rgb(255, 44, 90);
     width: auto;
   }
+
+  #project {
+    margin-bottom: 2em;
+  }
+
+  #contact {
+    margin-top: 2em;
+  }
   /*        */
   .flex-container {
     display: flex;
@@ -177,6 +189,7 @@
     background-color: #fff;
     position: relative;
     z-index: 1;
+    overflow: hidden;
   }
 
   .site-card:hover {
@@ -232,8 +245,8 @@
 
   .paint-cloudbox {
     position: absolute;
-    bottom: -603.5px;
-    left: -635px;
+    bottom: -622px;
+    left: -634.5px;
     z-index: 0;
   }
 
@@ -253,11 +266,13 @@
     font-weight: bold;
     gap: 15px;
     align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
   }
+
   @media only screen and (max-width: 3840px) {
     .site-header {
-      font-size: 40px;
+      font-size: 2em;
     }
 
     .social {
@@ -305,6 +320,16 @@
     .links {
       font-size: 2em;
     }
+
+    .paint-splat-cloudbox {
+      position: absolute;
+      bottom: -4px;
+      left: 0px;
+    }
+
+    .cloudbox-svg {
+      width: 128px;
+    }
   }
 
   @media only screen and (max-width: 2870px) {
@@ -348,6 +373,12 @@
 
     .links {
       font-size: 1.5em;
+    }
+
+    .paint-splat-cloudbox {
+      position: absolute;
+      bottom: -4px;
+      left: 0px;
     }
   }
 
@@ -401,7 +432,21 @@
     .links {
       font-size: 1em;
     }
+
+    .paint-splat-cloudbox {
+      position: absolute;
+      bottom: -52px;
+      left: -35px;
+    }
+
+    .paint-cloudbox {
+      position: absolute;
+      bottom: calc(-622px - 52px);
+      left: calc(-634.5px - 40px);
+      z-index: 0;
+    }
   }
+
   @media only screen and (max-width: 1630px) {
     .flex-item {
       width: 35rem;
@@ -447,6 +492,20 @@
 
     .links {
       font-size: 1em;
+    }
+
+    .paint-splat-cloudbox {
+      position: absolute;
+      bottom: -80px;
+      left: -73px;
+      transform: scale(0.75);
+    }
+
+    .paint-cloudbox {
+      position: absolute;
+      transform: scale(0.75);
+      bottom: -622px;
+      left: -634.5px;
     }
   }
 
