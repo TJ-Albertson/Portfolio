@@ -8,12 +8,6 @@
 </script>
 
 <main>
-  <head>
-    <script
-      src="https://kit.fontawesome.com/4cc35cc184.js"
-      crossorigin="anonymous"></script>
-  </head>
-
   <h1>TJ Albertson</h1>
   <h3>Fullstack Developer</h3>
   <table>
@@ -87,7 +81,7 @@
 
         <img src="images/colosseum.png" alt="colosseum-preview" />
         <div class="links">
-          <a href="https://themoviecolosseum.com" target="_blank">Website</a> |
+          <a href="https://colosseum.herokuapp.com/" target="_blank">Website</a> |
           <a
             href="https://github.com/TJ-Albertson/The-Colosseum"
             target="_blank">Github</a
@@ -104,10 +98,6 @@
 
 <style>
   @import url("https://fonts.googleapis.com/css?family=Poppins");
-
-  body {
-    overflow-y: hidden;
-  }
 
   main {
     position: relative;
@@ -325,10 +315,6 @@
       position: absolute;
       bottom: -4px;
       left: 0px;
-    }
-
-    .cloudbox-svg {
-      width: 128px;
     }
   }
 
